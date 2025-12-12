@@ -1,0 +1,50 @@
+
+.summarizer-form {
+  width: 100%;
+  max-width: 340px;        /* EXACT match with exam form */
+  margin: 0 auto;          /* center inside landing-box */
+  
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Inputs — same as exam-input */
+.summarizer-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: white;
+
+  font-size: 0.95rem;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.summarizer-input::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* Button — align with exam-button */
+.landing-summarizer-button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+
+  background: #6366f1;
+  border: none;
+
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+
+  transition: background 0.2s ease;
+}
+
+.landing-summarizer-button:hover {
+  background: #4f46e5;
+}

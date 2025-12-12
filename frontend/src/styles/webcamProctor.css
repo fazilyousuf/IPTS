@@ -1,0 +1,106 @@
+.webcam-proctor {
+  padding: 0.75rem;
+  border-radius: 10px;
+  background: #fdfbf6;
+  border: 1px solid #d4cfc0;
+  box-sizing: border-box;
+}
+
+/* Header line */
+.webcam-proctor__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.webcam-proctor__header h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #33322c;
+}
+
+.webcam-proctor__status {
+  font-size: 0.75rem;
+  padding: 0.15rem 0.4rem;
+  border-radius: 999px;
+  border: 1px solid #d4cfc0;
+  background: #f9f5ec;
+  color: #5c5a51;
+}
+
+.webcam-proctor__status--ok {
+  border-color: #16a34a;
+  color: #166534;
+  background: #dcfce7;
+}
+
+.webcam-proctor__status--error {
+  border-color: #b91c1c;
+  color: #7f1d1d;
+  background: #fee2e2;
+}
+
+/* Video */
+.webcam-proctor__video {
+  width: 100%;
+  border-radius: 8px;
+  background: #000;
+  margin-bottom: 0.8rem;
+}
+
+/* Hidden canvas */
+.webcam-proctor__canvas {
+  display: none;
+}
+
+/* Button bar */
+.webcam-proctor__controls {
+  display: flex;
+  gap: 0.7rem;
+}
+
+/* Base button */
+.webcam-proctor__btn {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.08s ease, color 0.15s ease;
+  border-width: 2px;
+  border-style: dotted;
+  background: #fdfbf6;
+}
+
+/* Start button */
+.webcam-proctor__btn--start {
+  border-color: #2f3a5f;
+  color: #2f3a5f;
+}
+
+.webcam-proctor__btn--start:hover:not(:disabled) {
+  background: #e4e0d5;
+  transform: translateY(-1px);
+}
+
+/* Stop button */
+.webcam-proctor__btn--stop {
+  border-color: #b91c1c;
+  color: #7f1d1d;
+  background: #fee2e2;
+}
+
+.webcam-proctor__btn--stop:hover:not(:disabled) {
+  background: #fecaca;
+  transform: translateY(-1px);
+}
+
+/* Disabled */
+.webcam-proctor__btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none;
+}

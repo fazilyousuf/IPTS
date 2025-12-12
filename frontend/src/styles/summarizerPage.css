@@ -1,0 +1,237 @@
+
+.summarizer-page {
+    inset: 0; 
+  min-height: 100vh;       /* allow page to grow with content */
+  width: 100%;
+  margin: 0;
+  padding: 2rem 1rem;
+position: fixed; 
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;  /* top-align so it can grow down */
+  overflow-y: auto;
+  background: #f5f2e9;      /* your aesthetic light background */
+  box-sizing: border-box;
+}
+
+
+/* Main card/container */
+.summarizer-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;         /* centered, no outside margin */
+  padding: 2rem;
+
+  background: #fdfbf6;
+  border: 1px solid #d4cfc0;
+  border-radius: 12px;
+
+  box-sizing: border-box;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Heading + email */
+.summarizer-container h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #33322c;
+}
+
+.summarizer-email {
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  color: #5c5a51;
+}
+
+/* TEXTAREA – dotted border aesthetic */
+.summarizer-textarea {
+  width: 100%;
+  min-height: 220px;
+  resize: vertical;
+
+  padding: 0.9rem 1rem;
+  border-radius: 8px;
+
+  border: 2px dotted #b0a99a;   /* <-- dotted border */
+  background: #ffffff;
+  color: #2d2c27;
+
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  box-sizing: border-box;
+}
+
+/* Tokens section */
+.summarizer-tokens {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: #4f4d44;
+}
+
+.summarizer-tokens-value {
+  font-weight: 600;
+}
+
+/* Let browser default slider sit inside a simple area */
+.summarizer-slider {
+  width: 100%;
+}
+
+/* BUTTON – centered, dotted border outline style */
+.summarizer-button-row {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.summarizer-button {
+  padding: 0.7rem 1.8rem;
+  border-radius: 999px;
+
+  background: #fdfbf6;
+  color: #2f3a5f;
+
+  border: 2px dotted #2f3a5f; /* dotted like ------- */
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: background 0.15s ease, color 0.15s ease, transform 0.1s ease;
+}
+
+.summarizer-button:hover:not(:disabled) {
+  background: #e4e0d5;
+  transform: translateY(-1px);
+}
+
+.summarizer-button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+/* SUMMARY BOX – same dotted look */
+.summarizer-output {
+  margin-top: 1.8rem;
+  padding: 1rem 1.2rem;
+
+  border-radius: 10px;
+  border: 2px dotted #b0a99a;  /* dotted like textarea */
+  background: #fbf8f1;
+  color: #2f2d27;
+}
+
+.summarizer-output h3 {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #3c3a33;
+}
+
+.summarizer-output p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.summarizer-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+/* Home button (dotted aesthetic) */
+.summarizer-home-btn {
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  background: #fdfbf6;
+  color: #2f3a5f;
+  border: 2px dotted #2f3a5f;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.summarizer-home-btn:hover {
+  background: #e4e0d5;
+  transform: translateY(-1px);
+}
+/* Small screens */
+/* Small screens */
+@media (max-width: 600px) {
+  .summarizer-page {
+    padding: 1.5rem 1rem;
+  }
+
+  .summarizer-container {
+    padding: 1.5rem;
+  }
+}
+
+/* Improved Mobile Responsiveness */
+@media (max-width: 480px) {
+  .summarizer-page {
+    padding: 1.2rem 0.7rem;
+  }
+
+  .summarizer-container {
+    padding: 1.2rem 1rem;
+    border-radius: 10px;
+  }
+
+  .summarizer-container h2 {
+    font-size: 1.3rem;
+  }
+
+  .summarizer-email {
+    font-size: 0.85rem;
+  }
+
+  .summarizer-textarea {
+    min-height: 180px;
+    font-size: 0.9rem;
+  }
+
+  .summarizer-button {
+    width: 100%;
+    padding: 0.8rem 0;
+    font-size: 1rem;
+  }
+
+  .summarizer-output {
+    padding: 0.9rem;
+    font-size: 0.9rem;
+  }
+  .summarizer-header-row {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .summarizer-home-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Ultra-small screens */
+@media (max-width: 360px) {
+  .summarizer-page {
+    padding: 1rem 0.5rem;
+  }
+
+  .summarizer-container {
+    padding: 1rem 0.7rem;
+  }
+
+  .summarizer-textarea {
+    min-height: 150px;
+  }
+}

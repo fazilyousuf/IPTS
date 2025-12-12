@@ -1,0 +1,34 @@
+/* Global reset-ish */
+* {
+  box-sizing: border-box;
+}
+
+/* Make layout fill the screen */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base typography & background */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background-color: #000000; /* safe default, overridden by pages like .landing-page */
+  color: #ffffff;
+}
+
+/* Links inherit color by default */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Optional: smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}

@@ -1,0 +1,55 @@
+/* Ensure form does not overflow */
+.exam-form {
+  width: 100%;
+  max-width: 340px;        /* ⬅️ controls how wide the inputs can go */
+  margin: 0 auto;          /* center horizontally */
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Error message */
+.exam-error {
+  color: #ff4d4d;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Input fields */
+.exam-input {
+  width: 100%;             /* 100% of .exam-form (max 340px) */
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: white;
+
+  font-size: 0.95rem;
+  outline: none;
+  box-sizing: border-box;  /* make sure padding stays inside width */
+}
+
+.exam-input::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* Button */
+.exam-button {
+  width: 100%;        /* stays inside the box */
+  padding: 0.75rem 1rem;
+
+  background: #6366f1;
+  border: none;
+  border-radius: 10px;
+
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+}
+
+.exam-button:hover {
+  background: #4f46e5;
+}
