@@ -1,11 +1,12 @@
 # settings.py (top)
+import dj_database_url
 import os
 from pathlib import Path
 from dotenv import load_dotenv
 load_dotenv()  # loads .env into environment
 
 GOOGLE_GENERATIVE_API_KEY = os.getenv("GOOGLE_GENERATIVE_API_KEY")
-SUMMARIZER_SAVE_TO_DB = os.getenv("SUMMARIZER_SAVE_TO_DB", "true").lower() == "true"
+SUMMARIZER_SAVE_TO_DB = os.getenv("SUMMARIZER_SAVE_TO_DB", "false").lower() == "true"
 RATE_LIMIT_PER_HOUR = int(os.getenv("RATE_LIMIT_PER_HOUR", "5"))
 
 
@@ -75,11 +76,9 @@ TEMPLATES = [
 WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR.parent / 'db.sqlite3',
-    }
+    'default': dj_database_url.parse(os.getenv("DATABASE_URL"))
 }
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {
